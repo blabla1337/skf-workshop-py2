@@ -1,0 +1,11 @@
+*.pyc
+**/*.pyc
+.DS_Store
+**/.__pycache__
+**/.DS_Store
+**/*.swp
+**/.eggs
+**/.cache
+**/build
+**/reports
+**/dist
