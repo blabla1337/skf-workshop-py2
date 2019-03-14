@@ -1,0 +1,17 @@
+1 Insecure deserialization - pickle  
+2 Insecure deserialization - yaml
+3 Server side template injection
+4 External entity attack
+5 Stored cross site scripting
+6 Reflected cross site scripting
+7 Cross site request forgery
+8 CORS misconfiguration
+9 Path/directory traversal
+10 Insecure file upload
+11 Hardcoded credentials
+12 JWT token is forgeable
+13 Username enumeration
+14 SQL injection
+15 vulnerable libraries
+16 Obscure backdoor
+17 Client side constraints
