@@ -15,7 +15,7 @@ def validator():
     if not session.get('loggedin'):
         return redirect("/dashboard/1", code=302)
     else:
-    return render_template("validator/index.html")
+        return render_template("validator/index.html")
 
 @app.route("/validator/upload", methods=['GET', 'POST'])
 def XML_validator():
