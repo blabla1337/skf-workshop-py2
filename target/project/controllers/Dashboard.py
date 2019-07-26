@@ -17,4 +17,5 @@ def inject(pageId):
 
 @app.route("/", methods=['GET'])
 def router():
+    session.clear()
     return redirect("/dashboard/1", code=302)
