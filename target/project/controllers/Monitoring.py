@@ -5,7 +5,10 @@ import os
 
 @app.route("/monitoring", methods=['GET'])
 def monitor():
-    return render_template("monitoring/index.html")
+    if not session.get('loggedin'):
+        return redirect("/dashboard/1", code=302)
+    else:
+        return render_template("monitoring/index.html")
 
 @app.context_processor
 def utility_processor():
