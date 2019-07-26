@@ -12,6 +12,9 @@ from xml.dom.pulldom import START_ELEMENT, parseString
 
 @app.route("/validator", methods=['GET'])
 def validator():
+    if not session.get('loggedin'):
+        return redirect("/dashboard/1", code=302)
+    else:
     return render_template("validator/index.html")
 
 @app.route("/validator/upload", methods=['GET', 'POST'])
