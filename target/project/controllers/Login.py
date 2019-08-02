@@ -32,3 +32,8 @@ def logout():
     else:
         session.clear()
         return redirect("/dashboard/1", code=302)
+
+@app.after_request
+def add_header(r):
+       r.headers.add('Cache-Control', 'no-store, no-cache, must-revalidate, post-check=0, pre-check=0')
+       return r
