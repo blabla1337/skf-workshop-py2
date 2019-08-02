@@ -10,7 +10,7 @@ def login():
     password = request.form.get('password')
     session['username'] = username
     session['password'] = password
-    if(password == "test" and username == "test"):
+    if(password == "admin" and username == "admin"):
         random = uuid.uuid1()
         response = make_response(redirect('/confidential'))
         session['loggedin'] = random
