@@ -10,12 +10,12 @@ def inject(pageId):
         pageId = 1
     sqli  = Dashboard()
     values = sqli.getPage(pageId)
-    title   = values[0][0]
-    content = values[0][1]
+    id      = values[0][0]
+    title   = values[0][1]
+    content = values[0][2]
     return render_template("dashboard/index.html",title = title, content = content, id = id)
 
 
 @app.route("/", methods=['GET'])
 def router():
-    session.clear()
     return redirect("/dashboard/1", code=302)
