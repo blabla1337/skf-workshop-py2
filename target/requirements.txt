@@ -5,4 +5,4 @@ Flask-WTF
 Jinja2==2.5.5
 Flask-DebugToolbar
 pyyaml==3.13
-Werkzeug==0.14.1
+Werkzeug==0.15.3
