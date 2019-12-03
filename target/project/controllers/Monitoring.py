@@ -8,7 +8,11 @@ def monitor():
     if not session.get('loggedin'):
         return redirect("/dashboard/1", code=302)
     else:
-        return render_template("monitoring/index.html")
+        if(os.name == 'nt'):
+            osname="nt"
+        else:
+            osname=""
+        return render_template("monitoring/index.html", osname=osname)
 
 @app.context_processor
 def utility_processor():
