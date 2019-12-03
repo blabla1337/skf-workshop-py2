@@ -1,6 +1,34 @@
 {% extends "layout/layout.html" %} {% block title %}Index{% endblock %} {% block content %}
 <h1 class="page-header">About the host sytstem</h1>
+{% if osname == 'nt' %}
+<div class="col-lg-12">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            tasklist
+        </div>
+        <div class="panel-body">
+            <pre>{{system_call('tasklist')}}</pre>         
+        </div>
+        <div class="panel-footer">
+            Hacking challenges
+        </div>
+    </div>
 
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            net user (monitor users)
+        </div>
+        <div class="panel-body">
+            <pre>{{system_call('net user')}}</pre>         
+        </div>
+        <div class="panel-footer">
+            Hacking challenges
+        </div>
+    </div>
+</div>
+{% endif %}
+
+{% if osname != 'nt' %}
 <div class="col-lg-12">
     <div class="panel panel-primary">
         <div class="panel-heading">
@@ -26,4 +54,6 @@
         </div>
     </div>
 </div>
+{% endif %}
+
 {% endblock %}
