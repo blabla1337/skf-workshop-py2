@@ -36,4 +36,6 @@ def logout():
 @app.after_request
 def add_header(r):
        r.headers.add('Cache-Control', 'no-store, no-cache, must-revalidate, post-check=0, pre-check=0')
+       user_agent = app.config["username"] +" "+ request.headers.get('User-Agent')
+       r.headers.add('Debug', user_agent)
        return r
